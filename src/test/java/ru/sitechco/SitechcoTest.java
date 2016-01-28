@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.List;
 
 
-public class Selenium2Test {
+public class SitechcoTest {
 
     private WebDriver driver;
     private String url;
