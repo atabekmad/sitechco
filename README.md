@@ -14,3 +14,7 @@ $ git clone https://github.com/atabekmad/sitechco.git
 $ cd sitechco
 $ mvn install
 ```
+
+Project was tested successfully on:
+  * Archlinux, Maven 3.3.9, Java 1.7.0_91
+  * Ubuntu, Maven 3.0.5, Java 1.7.0_91

@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.concurrent.TimeUnit;
 import java.util.List;
 
@@ -45,7 +47,6 @@ public class SitechcoTest {
 	// is always displayed if user has no project (except for first time log in situation)
 	if (!driver.findElements(By.cssSelector("div.mbox.error")).isEmpty()) {
 	    driver.findElement(By.cssSelector("div.exit")).click();
-	    System.out.println("We're in boys!");
 	    TimeUnit.MILLISECONDS.sleep(1000);	
 	}
 
@@ -84,7 +85,10 @@ public class SitechcoTest {
 
 	// Click Ok
 	driver.findElement(By.id("popup_ok")).click();
-	TimeUnit.MILLISECONDS.sleep(4000);	
+
+	// Wait for the notification to appear
+	WebElement successNotification = (new WebDriverWait(driver, 10))
+	    .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.exit")));
 
 	// Click Log Out
 	driver.findElement(By.cssSelector("#quit > img")).click();
