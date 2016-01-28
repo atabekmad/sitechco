@@ -18,7 +18,6 @@ public class Selenium2Test {
 
     @Before
     public void setUp()  {
-
 	url = "https://chlist.sitechco.ru/";
 	FirefoxProfile profile = new FirefoxProfile();
 	profile.setPreference("browser.startup.homepage", "about:blank");
@@ -30,7 +29,6 @@ public class Selenium2Test {
 
     @Test
     public void testSeleniumIde() throws Exception {
-
 	// Open up the browser with the given url
 	driver.get(url);
 
