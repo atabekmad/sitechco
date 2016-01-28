@@ -29,7 +29,7 @@ public class SitechcoTest {
     }
 
     @Test
-    public void testSeleniumIde() throws Exception {
+    public void test() throws Exception {
 	// Open up the browser with the given url
 	driver.get(url);
 
@@ -61,7 +61,7 @@ public class SitechcoTest {
 
 	// Type Project's description
 	driver.findElement(By.id("project_description")).clear();
-	driver.findElement(By.id("project_description")).sendKeys("This is a test project");
+	driver.findElement(By.id("project_description")).sendKeys("This is a new test project");
  
 	// Click Сохранить button
 	driver.findElement(By.xpath("//input[@value='Сохранить']")).click();
